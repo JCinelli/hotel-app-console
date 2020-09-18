@@ -1,4 +1,3 @@
-var choixMenu = require("./presentation")
+const choixMenu = require("./presentation")
 
-console.log('** Administration Hotel **');
 choixMenu.start();
