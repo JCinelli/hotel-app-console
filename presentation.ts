@@ -37,7 +37,7 @@ class Presentation {
                     monService.listerClient()
                         .then((listClients: Client[]) => console.log(
                             listClients
-                                .map((client: Client) => new Client(client.uuid, client.nom, client.prenoms).toString())
+                                .map((client: Client) => client.toString())
                                 .join('\n')
                         ))
                         .catch((err: string) => console.log(err))
@@ -71,7 +71,7 @@ class Presentation {
                         monService.findByName(saisieNom)
                             .then((clients: Client[]) => console.log(
                                 clients
-                                    .map((client: Client) => new Client(client.uuid, client.nom, client.prenoms).toString())
+                                    .map((client: Client) => client.toString())
                                     .join('\n')
                             ))
                             .catch((err: string) => console.log(err))
